@@ -32,4 +32,14 @@ El despliegue se encuentra en un entorno gratuito y por tanto limitado. Pueden h
 
 
 ## Configuracion
-- 
+- en el tsconfig debemos añadir la propiedad **outDir** , esta propiedad es importante ya que nos define la ubicacion de salida de los archivos **.js** tras la traspilacion. en este caso es **/dist**
+- actualizar el package.json , en la propieda **main** por la direccion o ruta principal donde se ejecuta nuestro comando start , para este caso **dist/server.js**
+- actualizar el package.json , para poder ejecutar scripts para compilar y transpilar nuestro codigo **TypeScript** , para nuestro caso seria algo como esto.
+  
+    "scripts": {
+        "dev": "ts-node src/server.ts",
+        "start": "ts-node dist/server.js",
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "postinstall": "link-module-alias"
+    },
