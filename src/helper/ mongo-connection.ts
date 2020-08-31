@@ -7,7 +7,7 @@ const CONFIG = require('@constants/config');
 /**
  * Performs the connection to Mongo.
  */
-async function mongoConnect() {
+const mongoConnect = async () => {
     return await mongoose.connect(CONFIG.url,
         {
             useNewUrlParser: true,
@@ -26,4 +26,4 @@ async function mongoConnect() {
 }
 
 
-module.exports = mongoConnect;
+export default mongoConnect;

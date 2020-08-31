@@ -57,9 +57,18 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
     /* Advanced Options */
     "skipLibCheck": true, /* Skip type checking of declaration files. */
-    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
+    "forceConsistentCasingInFileNames": true, /* Disallow inconsistently-cased references to the same file. */
+    "baseUrl": "./src",
+    "paths": {
+      "@src/*": ["/*"],
+      "@pages/*": ["pages/*"],
+      "@constants/*": ["constants/*"],
+      "@models/*": ["models/*"],
+      "@helper/*": ["helper/*"],
+      "@routes/*": ["routes/*"]
+    },
   },
   "include": [
-    "src"
+    "src/**/*.ts"
   ]
 }

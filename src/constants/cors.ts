@@ -1,8 +1,8 @@
-var corsOptions = {
+const corsOptions = {
     origin: '*',
     methods: '*',
     allowedHeaders: '*'
 }
 
 
-module.exports = corsOptions;
+export default corsOptions;

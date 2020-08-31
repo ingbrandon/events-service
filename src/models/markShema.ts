@@ -21,4 +21,4 @@ const markShema = new Schema(
 );
 
 const Mark = mongoose.model('Mark', markShema);
-module.exports = Mark;
+export default Mark;

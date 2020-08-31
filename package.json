@@ -2,8 +2,10 @@
   "name": "package",
   "version": "1.0.0",
   "description": "servicio para integrar pusher con RN",
-  "main": "index.ts",
+  "main": "src/server.ts",
   "scripts": {
+    "dev": "ts-node src/server.ts",
+    "start": "ts-node src/server.js",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "link-module-alias"
