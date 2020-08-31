@@ -28,7 +28,7 @@ class PusherController {
                     body('candidates.*.rating').exists().notEmpty().withMessage('El campo rating en candidates es requerido'),
                     body('location').exists().notEmpty().withMessage('El campo location es requerido'),
                     body('location.lat').exists().notEmpty().withMessage('El campo lat en location es requerido'),
-                    body('location.long').exists().notEmpty().withMessage('El campo long en location es requerido'),
+                    body('location.lng').exists().notEmpty().withMessage('El campo lng en location es requerido'),
                     body('date').exists().notEmpty().withMessage('El campo date es requerido'),
                 ]])
          , this.postCandidates);
@@ -50,7 +50,7 @@ class PusherController {
             validationResult(req).throw();
 
             console.log('User on pusher route ');
-            pusherClient.trigger('chat_channel', 'candidates', {
+            pusherClient.trigger('candidates_channel', 'addCandidates', {
                 candidates: req.body.candidates,
                 location: req.body.location,
                 date: req.body.date
