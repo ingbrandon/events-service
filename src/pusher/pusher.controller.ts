@@ -24,8 +24,12 @@ class PusherController {
             oneOf([
                 [
                     body('candidates').exists().isArray().withMessage('El campo candidates es requerido'),
-                    body('location').exists().isEmpty().withMessage('El description location es requerido'),
-                    body('date').exists().isEmpty().withMessage('El coordinates date es requerido'),
+                    body('candidates.*.name').exists().notEmpty().withMessage('El campo name en candidates es requerido'),
+                    body('candidates.*.rating').exists().notEmpty().withMessage('El campo rating en candidates es requerido'),
+                    body('location').exists().notEmpty().withMessage('El campo location es requerido'),
+                    body('location.lat').exists().notEmpty().withMessage('El campo lat en location es requerido'),
+                    body('location.long').exists().notEmpty().withMessage('El campo long en location es requerido'),
+                    body('date').exists().notEmpty().withMessage('El campo date es requerido'),
                 ]])
          , this.postCandidates);
     }
@@ -51,7 +55,8 @@ class PusherController {
                 location: req.body.location,
                 date: req.body.date
             });
-            res.sendStatus(204).json({
+            res.send({
+                error:false,
                 message: 'successfully!',
                 response: 'Se ha realizado con exito la operacion.'
             });
