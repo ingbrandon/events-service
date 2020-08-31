@@ -1,9 +1,9 @@
 
-const { check, oneOf, validationResult } = require('express-validator');
+import { check, oneOf, validationResult }  from 'express-validator';
 const routes = require('express').Router();
 
 
-routes.get('/users/:name', function (req, res) { // (3)
+routes.get('/users/:name', function (req:any, res:any) { // (3)
     console.log('User joined: ' + req.params.name);
     res.sendStatus(204).json({ message: 'successfully!' });;
 });
@@ -14,7 +14,7 @@ routes.post('/users',
         [
             check('name').exists().withMessage('El campo name es requerido'),
         ]])
-    , function (req, res) { // (3)
+    , function (req:any, res:any) { // (3)
         try {
             validationResult(req).throw();
 

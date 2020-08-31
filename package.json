@@ -2,7 +2,7 @@
   "name": "package",
   "version": "1.0.0",
   "description": "servicio para integrar pusher con RN",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,6 +25,7 @@
   },
   "homepage": "https://gitlab.com/chat-group2/node-chat#readme",
   "dependencies": {
+    "@types/express": "^4.17.7",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",

@@ -10,7 +10,7 @@ const pusherClient = new Pusher(pusherConfig);
 
 
 
-routes.put('/users/:name', function (req, res) { // (4)
+routes.put('/users/:name', function (req: any, res: any) { // (4)
     console.log('User joined: ' + req.params.name);
     pusherClient.trigger('chat_channel', 'join', {
         name: req.params.name
@@ -18,7 +18,7 @@ routes.put('/users/:name', function (req, res) { // (4)
     res.sendStatus(204);
 });
 
-routes.delete('/users/:name', function (req, res) { // (5)
+routes.delete('/users/:name', function (req: any, res: any) { // (5)
     console.log('User left: ' + req.params.name);
     pusherClient.trigger('chat_channel', 'part', {
         name: req.params.name
@@ -26,7 +26,7 @@ routes.delete('/users/:name', function (req, res) { // (5)
     res.sendStatus(204);
 });
 
-routes.post('/users/:name/messages', function (req, res) { // (5)
+routes.post('/users/:name/messages', function (req: any, res: any) { // (5)
     console.log('User ' + req.params.name + ' sent message: ' + req.body.message);
     pusherClient.trigger('chat_channel', 'message', {
         name: req.params.name,
