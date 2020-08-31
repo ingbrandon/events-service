@@ -3,6 +3,8 @@ import { Request, Response } from 'express'
 import { check, body, oneOf, validationResult } from 'express-validator';
 import Pusher from 'pusher';
 
+import * as PusherInterface from './pusher.iterface';
+
 const pusherConfig = require('@constants/pusher.json');// importar la configruacion de pushcer
 const pusherClient = new Pusher(pusherConfig);
 
@@ -21,9 +23,9 @@ class PusherController {
         this.router.post(this.path,
             oneOf([
                 [
-                    body('candidates').exists().withMessage('El campo candidates es requerido'),
-                    body('location').exists().withMessage('El description location es requerido'),
-                    body('date').exists().withMessage('El coordinates date es requerido'),
+                    body('candidates').exists().isArray().withMessage('El campo candidates es requerido'),
+                    body('location').exists().isEmpty().withMessage('El description location es requerido'),
+                    body('date').exists().isEmpty().withMessage('El coordinates date es requerido'),
                 ]])
          , this.postCandidates);
     }
