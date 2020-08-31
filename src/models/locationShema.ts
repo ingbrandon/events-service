@@ -1,5 +1,5 @@
 // Using Node.js `require()`
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const locationShema = new Schema(

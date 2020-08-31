@@ -4,11 +4,11 @@ const locationShema = require('@model/locationShema');
 
 
 const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
+// const ObjectId = Schema.ObjectId;
 
 const markShema = new Schema(
     {
-        id: ObjectId,
+        // id: ObjectId,
         name: { type: String, default: '', required: true },
         description: { type: String, default: '', required: true},
         coordinates: {
