@@ -8,6 +8,7 @@
     "start": "ts-node dist/server.js",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "command -v link-module-alias && link-module-alias clean || true",
     "postinstall": "link-module-alias"
   },
   "repository": {
