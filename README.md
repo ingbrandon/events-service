@@ -13,7 +13,7 @@ El despliegue se encuentra en un entorno gratuito y por tanto limitado. Pueden h
 - Pusher
 - Node
 - nodemon (cuando se esta en modo desarrollo refresca los cambios realizados al instante, sin necesidad de para el servidor y volver a subirlo)
-- [![express-validator](https://express-validator.github.io/docs/custom-error-messages.html)] (validar las entradas de los parametros)
+- [[express-validator](https://express-validator.github.io/docs/custom-error-messages.html)] (validar las entradas de los parametros)
 - cors
 - link-module-alias, para rutas absolutas
 - typescript
