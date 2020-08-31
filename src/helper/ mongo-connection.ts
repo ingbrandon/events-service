@@ -17,9 +17,9 @@ async function mongoConnect() {
         })
         .then(() => {
             console.log(`Mongo DB connected.`)
-            connected = true
+            return true
         })
-        .catch(error => {
+        .catch( (error: any) => {
             console.log(`Couldn't connect DB. Details: ${error}`)
             return Promise.reject('Internal server error starting repository.')
         })

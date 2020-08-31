@@ -1,4 +1,4 @@
-const { check, oneOf, validationResult } = require('express-validator');
+import { check, body, oneOf, validationResult } from 'express-validator';
 const routes = require('express').Router();
 
 const Pusher = require('pusher');
