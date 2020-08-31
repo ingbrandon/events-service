@@ -102,5 +102,4 @@ routes.post('/createLocations',
     });
 
 
-
-module.exports = routes;
+export default routes;

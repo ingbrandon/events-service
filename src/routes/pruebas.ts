@@ -33,5 +33,5 @@ routes.post('/users',
 
 
 
-module.exports = routes;
-export default routes
+
+export default routes;

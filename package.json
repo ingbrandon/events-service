@@ -2,11 +2,11 @@
   "name": "package",
   "version": "1.0.0",
   "description": "servicio para integrar pusher con RN",
-  "main": "src/server.ts",
+  "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node src/server.ts",
-    "start": "ts-node src/server.js",
-    "tsc": "tsc",
+    "start": "ts-node dist/server.js",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "link-module-alias"
   },
@@ -17,8 +17,9 @@
   "keywords": [
     "node",
     "pusher",
-    "chat",
-    "reactnative"
+    "test",
+    "react-native",
+    "react"
   ],
   "author": "Brandon Henao",
   "license": "ISC",

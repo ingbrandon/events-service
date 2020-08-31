@@ -36,4 +36,4 @@ routes.post('/users/:name/messages', function (req: any, res: any) { // (5)
 });
 
 
-module.exports = routes;
+export default routes;

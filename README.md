@@ -16,6 +16,7 @@ El despliegue se encuentra en un entorno gratuito y por tanto limitado. Pueden h
 - [![express-validator](https://express-validator.github.io/docs/custom-error-messages.html)] (validar las entradas de los parametros)
 - cors
 - link-module-alias, para rutas absolutas
+- typescript
 
 
 
@@ -23,6 +24,12 @@ El despliegue se encuentra en un entorno gratuito y por tanto limitado. Pueden h
 ## Comandos
 - npm init , para iniciar el proyecto node
 - npm install , install todas las dependencias
-- npm run postinstall , para instalar link-module-alias
-- node index.js , para poner en funcionamiento el proyecto
-- nodemon index.js  , para poner en funcionamiento el proyecto
+- npm run postinstall , para instalar **link-module-alias**
+- npm run build , construye en una carpeta dist de la aplicacion en **.js**, esta es ignorada por el **.gitignore** ,por lo tanto es necesario ejecutar este comando si quieres ejecutar el proyecto con .js
+- npm run start , ejecuta la aplicacion con archivos de extension **.js** en una carpeta llamada **/dist** , antes de ejecutar este comando se debe ejecutar **npm run build**
+- nodemon server.js  , para poner en funcionamiento el proyecto -> starting `ts-node dist/server.js` es requerido haber jecutado con anteriorida el comando **npm run buid** 
+- nodemon src/server.ts  , para poner en funcionamiento el proyecto -> starting `ts-node src/server.ts`
+
+
+## Configuracion
+- 
